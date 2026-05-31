@@ -2,7 +2,6 @@ const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const intro = document.querySelector(".video-intro");
 const introVideo = document.querySelector(".intro-video");
-const introStart = document.querySelector(".intro-start");
 
 function finishIntro() {
   if (!intro) {
@@ -13,17 +12,15 @@ function finishIntro() {
   document.body.classList.remove("intro-active");
 }
 
-if (intro && introVideo && introStart) {
-  introStart.addEventListener("click", () => {
-    intro.classList.add("is-playing");
-    introVideo.currentTime = 0;
+if (intro && introVideo) {
+  introVideo.muted = true;
+  introVideo.currentTime = 0;
 
-    const playIntro = introVideo.play();
+  const playIntro = introVideo.play();
 
-    if (playIntro) {
-      playIntro.catch(finishIntro);
-    }
-  });
+  if (playIntro) {
+    playIntro.catch(finishIntro);
+  }
 
   introVideo.addEventListener("ended", finishIntro);
   introVideo.addEventListener("error", finishIntro);

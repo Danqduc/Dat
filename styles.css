@@ -441,19 +441,16 @@ blockquote {
 }
 
 .product-copy {
-  display: flex;
-  min-height: 520px;
-  align-items: center;
-  justify-content: center;
-  max-width: none;
+  max-width: 470px;
 }
 
-.brand-mark {
+.brand-signature {
+  margin-top: 34px;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(96px, 14vw, 210px);
+  font-size: clamp(46px, 7vw, 82px);
   font-weight: 600;
   letter-spacing: 0.12em;
-  line-height: 0.9;
+  line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
 }

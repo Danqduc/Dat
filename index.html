@@ -31,7 +31,9 @@
         <a href="#journal">Nhật Ký</a>
         <a href="#story">Câu Chuyện</a>
       </nav>
-      <a class="shop-link" href="#featured">Mua Ngay</a>
+      <a class="shop-link zalo-link" href="https://zalo.me/0937906110" target="_blank" rel="noopener" aria-label="Liên hệ qua Zalo">
+        <span aria-hidden="true">Zalo</span>
+      </a>
     </header>
 
     <main id="top">
@@ -85,12 +87,14 @@
         <h2>Hai Nghề Thủ Công, Một Tầm Nhìn</h2>
         <div class="collection-grid">
           <a class="collection-card" id="candles" href="#featured">
-            <img src="assets/site/candles.jpg" alt="Những ngọn nến thơm phát sáng trong ánh ấm">
+            <img class="card-image-base" src="assets/site/candles-default.jpg?v=20260602" alt="Ngọn nến thơm phát sáng trong ánh ấm">
+            <img class="card-image-hover" src="assets/site/candles-hover.jpg?v=20260602" alt="Hoa khô và nến thơm trong không gian thư giãn">
             <span>Khám Phá Bộ Sưu Tập</span>
             <h3>Những tầng hương biết kể chuyện</h3>
           </a>
           <a class="collection-card" id="tables" href="#featured">
-            <img src="assets/site/river-table.jpg" alt="Bàn gỗ nguyên cạnh với dòng resin xanh">
+            <img class="card-image-base" src="assets/site/river-table.jpg?v=20260602" alt="Bàn gỗ nguyên cạnh với dòng resin xanh">
+            <img class="card-image-hover" src="assets/site/river-table-hover.jpg?v=20260602" alt="Bàn tròn resin màu xanh biển">
             <span>Khám Phá Những Chiếc Bàn</span>
             <h3>Nghệ thuật hữu dụng cho không gian của bạn</h3>
           </a>
@@ -112,20 +116,13 @@
 
       <section class="featured section" id="featured">
         <div class="product-copy">
-          <p class="eyebrow">Một chiếc bàn độc bản</p>
-          <h2>Midnight River</h2>
-          <p>
-            Một dòng resin xanh cobalt thẳm len qua phiến gỗ ấm màu, được cân bằng
-            bằng lớp hoàn thiện mịn như satin và những cạnh gỗ mài tay đầy tiết chế.
-          </p>
-          <div class="price-row">
-            <span>$3,200</span>
-            <a class="button" href="#footer">Liên Hệ</a>
-          </div>
+          <div class="brand-mark" aria-label="B&Y">B&Y</div>
         </div>
         <div class="product-media">
-          <img class="product-candle" src="assets/site/product-candle.jpg" alt="Ngọn nến hổ phách đang cháy bên cạnh hũ thủy tinh">
-          <img class="product-table" src="assets/site/product-table.jpg" alt="Bàn gỗ với dòng resin xanh đang được trưng bày">
+          <img src="assets/site/product-candle-making.jpg?v=20260602-2" alt="Nguyên liệu và hũ nến thủ công trên bàn gỗ">
+          <img src="assets/site/product-candle-wick.jpg?v=20260602-2" alt="Đôi tay đang chỉnh tim nến trong hũ thủy tinh">
+          <img class="product-candle" src="assets/site/product-candle.jpg?v=20260602" alt="Ngọn nến hổ phách đang cháy bên cạnh hũ thủy tinh">
+          <img class="product-table" src="assets/site/product-table.jpg?v=20260602" alt="Bàn gỗ với dòng resin xanh đang được trưng bày">
         </div>
       </section>
 
@@ -134,22 +131,16 @@
         <h2>Câu Chuyện, Cảm Hứng & Nghề Thủ Công</h2>
         <div class="journal-grid">
           <article>
-            <img src="assets/site/journal-home.jpg" alt="Không gian nội thất ấm áp với nến trên bàn">
+            <img src="assets/site/journal-home.jpg?v=20260602" alt="Không gian nội thất ấm áp với nến trên bàn">
             <p>Nghi thức trong nhà</p>
             <h3>Cách chọn hương nến cho từng căn phòng trong tổ ấm</h3>
           </article>
           <article>
-            <img src="assets/site/journal-guide.jpg" alt="Phòng khách phong cách châu Âu ngập sáng">
+            <img class="journal-guide-img" src="assets/site/journal-guide.jpg?v=20260602" alt="Phòng khách phong cách châu Âu ngập sáng">
             <p>Cẩm nang</p>
-            <h3>Nếp sống châu Âu và nghệ thuật của vẻ sang trọng thầm lặng</h3>
-          </article>
-          <article>
-            <img src="assets/site/journal-art.jpg" alt="Nghệ nhân đang làm việc trên mặt bàn gỗ">
-            <p>Quy trình</p>
-            <h3>Một ngày trong xưởng: từ gỗ óc chó thô đến chiếc bàn hoàn thiện</h3>
+            <h3>Câu Chuyện hình Thành của B&Y !</h3>
           </article>
         </div>
-        <a class="text-link" href="#footer">Xem Tất Cả Bài Viết</a>
       </section>
     </main>
 
@@ -173,12 +164,7 @@
         <a href="#journal">Nhật Ký</a>
         <a href="#footer">Liên Hệ</a>
       </div>
-      <form>
-        <h4>Giữ Lại Cảm Hứng</h4>
-        <label for="email">Địa chỉ email</label>
-        <input id="email" type="email" placeholder="Email của bạn">
-        <button class="button" type="submit">Đăng Ký</button>
-      </form>
+      <div class="footer-placeholder" aria-label="Thông tin cá nhân sẽ được cập nhật sau"></div>
     </footer>
 
     <script src="script.js?v=20260602-1"></script>

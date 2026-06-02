@@ -162,15 +162,39 @@ label {
 
 .shop-link {
   justify-self: end;
-  padding: 10px 22px;
+  display: inline-flex;
+  min-width: 50px;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
   border: 1px solid #6e6258;
+  border-radius: 999px;
   font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .shop-link:hover,
 .button:hover {
   background: var(--ink);
   color: #fffaf1;
+}
+
+.zalo-link {
+  border-color: #0068ff;
+  background: #0068ff;
+  color: #fff;
+}
+
+.zalo-link:hover {
+  border-color: var(--ink);
+}
+
+.zalo-link span {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .menu-toggle {
@@ -357,8 +381,20 @@ blockquote {
   transition: transform 600ms ease;
 }
 
-.collection-card:hover img {
+.collection-card:hover .card-image-base,
+.collection-card:hover .card-image-hover {
   transform: scale(1.04);
+}
+
+.card-image-hover {
+  -webkit-clip-path: circle(0% at 50% 50%);
+  clip-path: circle(0% at 50% 50%);
+  transition: -webkit-clip-path 760ms cubic-bezier(0.22, 1, 0.36, 1), clip-path 760ms cubic-bezier(0.22, 1, 0.36, 1), transform 760ms ease;
+}
+
+.collection-card:hover .card-image-hover {
+  -webkit-clip-path: circle(145% at 50% 50%);
+  clip-path: circle(145% at 50% 50%);
 }
 
 .collection-card h3,
@@ -405,19 +441,21 @@ blockquote {
 }
 
 .product-copy {
-  max-width: 470px;
-}
-
-.price-row {
   display: flex;
+  min-height: 520px;
   align-items: center;
-  gap: 24px;
-  margin-top: 34px;
+  justify-content: center;
+  max-width: none;
 }
 
-.price-row span {
+.brand-mark {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 36px;
+  font-size: clamp(96px, 14vw, 210px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .button {
@@ -438,17 +476,18 @@ blockquote {
 
 .product-media {
   display: grid;
-  grid-template-columns: 0.72fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  align-items: end;
+  align-items: stretch;
 }
 
-.product-candle {
-  aspect-ratio: 1.55 / 1;
+.product-candle,
+.product-media img,
+.product-table {
+  aspect-ratio: 1 / 1.12;
 }
 
 .product-table {
-  aspect-ratio: 1 / 0.78;
   background: #0f0d0b;
 }
 
@@ -459,14 +498,21 @@ blockquote {
 
 .journal-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 48px);
+  max-width: 1160px;
   margin: 52px 0 24px;
+  margin-inline: auto;
   text-align: left;
 }
 
 .journal article img {
   aspect-ratio: 1.75 / 1;
+}
+
+.journal-guide-img {
+  object-fit: contain;
+  background: #000;
 }
 
 .journal article p {
@@ -505,6 +551,10 @@ blockquote {
 form {
   display: grid;
   gap: 12px;
+}
+
+.footer-placeholder {
+  min-height: 154px;
 }
 
 label {

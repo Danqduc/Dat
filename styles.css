@@ -295,6 +295,8 @@ em {
 .story-gallery .wide-img {
   grid-column: 1 / -1;
   aspect-ratio: 1.85 / 1;
+  object-fit: contain;
+  background: #000;
 }
 
 .story-copy p:not(.eyebrow),
